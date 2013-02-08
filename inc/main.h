@@ -10,6 +10,7 @@ void LED_Config(void);
 void TIMER_Config(void);
 
 void USART2_SetSpeed(int);
+void TReset(void);
 void TWriteByte(char);
 char TReadByte(void);
 char TReadBit(void);

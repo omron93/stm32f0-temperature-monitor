@@ -3,8 +3,7 @@
 
 int count = 0;
 long c = 0;
-char input = 0;   //input in binary mode
-char response = 0;      //response
+volatile char input = 0;   //input in binary mode
 
 volatile int done = 0;
 volatile char zprava = -1;

@@ -1,7 +1,7 @@
 #include "main.h"
 
 extern long c;
-extern char input;
+extern volatile char input;
 
 extern volatile char zprava;
 extern volatile int done;
@@ -19,26 +19,32 @@ int main(void)
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
   
-  //GPIOC->ODR ^= GPIO_Pin_8;
-  done = 1;
-  USART_SendData(USART2, 0xF0);
-  while(done);
-  //GPIOC->ODR ^= GPIO_Pin_8;
-  
+  TReset();
   USART2_SetSpeed(115200);
-  
-  //TWriteByte(0xCC);
-  //TWriteByte(0xBE);
-  //x = TReadByte();
-  /*done = 1;
-  USART_SendData(USART2, 0x00);
-  while(done);*/
-  
   TWriteByte(0xCC);
-  TWriteByte(0xB4);
+  TWriteByte(0x44);
+  //Convert temperature
   zprava = TReadBit();
+  int x =0;
+  while(zprava == 0)
+    {
+      x++;
+      GPIOC->ODR |= GPIO_Pin_9;
+      zprava = TReadBit();
+    }
+  zprava =x;
   
-  
+  TReset();
+  USART2_SetSpeed(115200);
+  TWriteByte(0xCC);
+  TWriteByte(0xBE);
+  char scratchpad[9];
+  for(int i = 0; i < 9; i++)
+    {
+      scratchpad[i] = TReadByte();
+    }
+  input = scratchpad[0];
+  zprava = scratchpad[1];
   
   //GPIOC->ODR ^= GPIO_Pin_8;
   
@@ -221,6 +227,17 @@ void USART2_SetSpeed(int speed)
     USART_Cmd(USART2, ENABLE);
   }
 
+void TReset(void)
+  {
+    USART2_SetSpeed(9600);
+    done = 1;
+    USART_SendData(USART2, 0xF0);
+    while(done);
+    if(input == 0xE0);
+      //GPIOC->ODR ^= GPIO_Pin_8;
+    
+  }
+
 void TWriteByte(char data)
   {    
     for(int i = 0; i < 8; i++)
@@ -248,7 +265,7 @@ char TReadByte(void)
         done = 1;
         USART_SendData(USART2, 0xFF);
         while(done);
-        if((unsigned char)input != 0xFF)
+        if((unsigned char)input == 0xFF)
           {
             GPIOC->ODR |= GPIO_Pin_8;
             data |= 0x80;
@@ -265,7 +282,7 @@ char TReadBit(void)
     while(done);
     if((unsigned char)input == 0xFF)
       {
-        GPIOC->ODR |= GPIO_Pin_8;
+        //GPIOC->ODR |= GPIO_Pin_8;
         return 1;
       }
     return 0;
