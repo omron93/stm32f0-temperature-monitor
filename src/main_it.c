@@ -3,7 +3,7 @@
 
 int count = 0;
 long c = 0;
-long input = 0;   //input in binary mode
+char input = 0;   //input in binary mode
 char response = 0;      //response
 
 volatile int done = 0;
@@ -75,7 +75,7 @@ void USART2_IRQHandler(void)
       {
         input = USART_ReceiveData(USART2);
         
-        done = 1;
+        done = 0;
         //GPIOC->ODR ^= GPIO_Pin_8;
 
         USART_ITConfig(USART2, USART_IT_RXNE, DISABLE);
