@@ -1,21 +1,25 @@
 Archive member included because of file (symbol)
 
 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
-                              /tmp/ccQlanhz.o (GPIO_Init)
+                              /tmp/ccCEshbj.o (GPIO_Init)
 Libraries/libstm32f0.a(stm32f0xx_misc.o)
-                              /tmp/ccQlanhz.o (NVIC_Init)
+                              /tmp/ccCEshbj.o (NVIC_Init)
 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
-                              /tmp/ccQlanhz.o (RCC_AHBPeriphClockCmd)
-Libraries/libstm32f0.a(stm32f0xx_tim.o)
-                              /tmp/ccQlanhz.o (TIM_TimeBaseInit)
+                              /tmp/ccCEshbj.o (RCC_AHBPeriphClockCmd)
 Libraries/libstm32f0.a(stm32f0xx_usart.o)
-                              /tmp/ccQlanhz.o (USART_Init)
+                              /tmp/ccCEshbj.o (USART_Init)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
-                              /tmp/ccGt0kYY.o (__aeabi_uidiv)
+                              /tmp/ccCEshbj.o (__aeabi_uidiv)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
                               /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
-                              /tmp/cckAGAr0.o (__libc_init_array)
+                              /tmp/ccaGkBoT.o (__libc_init_array)
+
+Allocating common symbols
+Common symbol       size              file
+
+scratchpad          0x9               /tmp/ccCEshbj.o
+commands            0x4               /tmp/cc4A3QbZ.o
 
 Discarded input sections
 
@@ -33,31 +37,27 @@ Discarded input sections
                 0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
  .ARM.attributes
                 0x00000000       0x2b /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
- .text          0x00000000        0x0 /tmp/ccQlanhz.o
- .data          0x00000000        0x0 /tmp/ccQlanhz.o
- .bss           0x00000000        0x0 /tmp/ccQlanhz.o
- .text          0x00000000        0x0 /tmp/ccGt0kYY.o
- .data          0x00000000        0x0 /tmp/ccGt0kYY.o
- .bss           0x00000000        0x0 /tmp/ccGt0kYY.o
+ .text          0x00000000        0x0 /tmp/ccCEshbj.o
+ .data          0x00000000        0x0 /tmp/ccCEshbj.o
+ .bss           0x00000000        0x0 /tmp/ccCEshbj.o
+ .text          0x00000000        0x0 /tmp/ccoho9K5.o
+ .data          0x00000000        0x0 /tmp/ccoho9K5.o
+ .bss           0x00000000        0x0 /tmp/ccoho9K5.o
  .text.SystemCoreClockUpdate
-                0x00000000       0x68 /tmp/ccGt0kYY.o
+                0x00000000       0x68 /tmp/ccoho9K5.o
  .data.AHBPrescTable
-                0x00000000       0x10 /tmp/ccGt0kYY.o
- .data.SystemCoreClock
-                0x00000000        0x4 /tmp/ccGt0kYY.o
- .text          0x00000000        0x0 /tmp/ccCUIUyv.o
- .data          0x00000000        0x0 /tmp/ccCUIUyv.o
- .bss           0x00000000        0x0 /tmp/ccCUIUyv.o
- .text          0x00000000       0x14 /tmp/cckAGAr0.o
- .data          0x00000000        0x0 /tmp/cckAGAr0.o
- .bss           0x00000000        0x0 /tmp/cckAGAr0.o
+                0x00000000       0x10 /tmp/ccoho9K5.o
+ .text          0x00000000        0x0 /tmp/cc4A3QbZ.o
+ .data          0x00000000        0x0 /tmp/cc4A3QbZ.o
+ .bss           0x00000000        0x0 /tmp/cc4A3QbZ.o
+ .text          0x00000000       0x14 /tmp/ccaGkBoT.o
+ .data          0x00000000        0x0 /tmp/ccaGkBoT.o
+ .bss           0x00000000        0x0 /tmp/ccaGkBoT.o
  .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_tim.o)
  .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_usart.o)
  .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_usart.o)
  .data          0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
@@ -90,10 +90,10 @@ Linker script and memory map
 
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
-LOAD /tmp/ccQlanhz.o
-LOAD /tmp/ccGt0kYY.o
-LOAD /tmp/ccCUIUyv.o
-LOAD /tmp/cckAGAr0.o
+LOAD /tmp/ccCEshbj.o
+LOAD /tmp/ccoho9K5.o
+LOAD /tmp/cc4A3QbZ.o
+LOAD /tmp/ccaGkBoT.o
 LOAD Libraries/libstm32f0.a
 START GROUP
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a
@@ -108,11 +108,11 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 .isr_vector     0x08000000       0xc4
                 0x08000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x08000000       0xc4 /tmp/cckAGAr0.o
+ .isr_vector    0x08000000       0xc4 /tmp/ccaGkBoT.o
                 0x08000000                g_pfnVectors
                 0x080000c4                . = ALIGN (0x4)
 
-.text           0x080000c4     0x1fec
+.text           0x080000c4     0x1440
                 0x080000c4                . = ALIGN (0x4)
  *(.text)
  .text          0x080000c4      0x1f8 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
@@ -173,244 +173,156 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
                 0x08000880                RCC_ClearFlag
                 0x08000894                RCC_GetITStatus
                 0x080008a4                RCC_ClearITPendingBit
- .text          0x080008b0      0xbc8 Libraries/libstm32f0.a(stm32f0xx_tim.o)
-                0x080008b0                TIM_DeInit
-                0x080009a8                TIM_TimeBaseInit
-                0x08000a30                TIM_TimeBaseStructInit
-                0x08000a44                TIM_PrescalerConfig
-                0x08000a4c                TIM_CounterModeConfig
-                0x08000a58                TIM_SetCounter
-                0x08000a5c                TIM_SetAutoreload
-                0x08000a60                TIM_GetCounter
-                0x08000a64                TIM_GetPrescaler
-                0x08000a68                TIM_UpdateDisableConfig
-                0x08000a84                TIM_UpdateRequestConfig
-                0x08000aa0                TIM_ARRPreloadConfig
-                0x08000abc                TIM_SelectOnePulseMode
-                0x08000acc                TIM_SetClockDivision
-                0x08000ae0                TIM_Cmd
-                0x08000afc                TIM_BDTRConfig
-                0x08000b1c                TIM_BDTRStructInit
-                0x08000b30                TIM_CtrlPWMOutputs
-                0x08000b50                TIM_OC1Init
-                0x08000bd4                TIM_OC2Init
-                0x08000c50                TIM_OC3Init
-                0x08000cd4                TIM_OC4Init
-                0x08000d34                TIM_OCStructInit
-                0x08000d48                TIM_SelectOCxM
-                0x08000d98                TIM_SetCompare1
-                0x08000d9c                TIM_SetCompare2
-                0x08000da0                TIM_SetCompare3
-                0x08000da4                TIM_SetCompare4
-                0x08000da8                TIM_ForcedOC1Config
-                0x08000db4                TIM_ForcedOC2Config
-                0x08000dc8                TIM_ForcedOC3Config
-                0x08000dd4                TIM_ForcedOC4Config
-                0x08000de8                TIM_CCPreloadControl
-                0x08000e04                TIM_OC1PreloadConfig
-                0x08000e10                TIM_OC2PreloadConfig
-                0x08000e24                TIM_OC3PreloadConfig
-                0x08000e30                TIM_OC4PreloadConfig
-                0x08000e44                TIM_OC1FastConfig
-                0x08000e50                TIM_OC2FastConfig
-                0x08000e64                TIM_OC3FastConfig
-                0x08000e70                TIM_OC4FastConfig
-                0x08000e84                TIM_ClearOC1Ref
-                0x08000e90                TIM_ClearOC2Ref
-                0x08000ea0                TIM_ClearOC3Ref
-                0x08000eac                TIM_ClearOC4Ref
-                0x08000ebc                TIM_OC1PolarityConfig
-                0x08000ec8                TIM_OC1NPolarityConfig
-                0x08000ed4                TIM_OC2PolarityConfig
-                0x08000ee4                TIM_OC2NPolarityConfig
-                0x08000ef4                TIM_OC3PolarityConfig
-                0x08000f08                TIM_OC3NPolarityConfig
-                0x08000f1c                TIM_OC4PolarityConfig
-                0x08000f30                TIM_SelectOCREFClear
-                0x08000f40                TIM_CCxCmd
-                0x08000f58                TIM_CCxNCmd
-                0x08000f70                TIM_SelectCOM
-                0x08000f8c                TIM_ICInit
-                0x080010c8                TIM_ICStructInit
-                0x080010d8                TIM_PWMIConfig
-                0x0800121c                TIM_GetCapture1
-                0x08001220                TIM_GetCapture2
-                0x08001224                TIM_GetCapture3
-                0x08001228                TIM_GetCapture4
-                0x0800122c                TIM_SetIC1Prescaler
-                0x0800123c                TIM_SetIC2Prescaler
-                0x08001254                TIM_SetIC3Prescaler
-                0x08001264                TIM_SetIC4Prescaler
-                0x0800127c                TIM_ITConfig
-                0x08001290                TIM_GenerateEvent
-                0x08001294                TIM_GetFlagStatus
-                0x080012a0                TIM_ClearFlag
-                0x080012a8                TIM_GetITStatus
-                0x080012c0                TIM_ClearITPendingBit
-                0x080012c8                TIM_DMAConfig
-                0x080012d0                TIM_DMACmd
-                0x080012e4                TIM_SelectCCDMA
-                0x08001300                TIM_InternalClockConfig
-                0x0800130c                TIM_ITRxExternalClockConfig
-                0x08001320                TIM_TIxExternalClockConfig
-                0x08001394                TIM_ETRClockMode1Config
-                0x080013b4                TIM_ETRClockMode2Config
-                0x080013d4                TIM_SelectInputTrigger
-                0x080013e0                TIM_SelectOutputTrigger
-                0x080013f0                TIM_SelectSlaveMode
-                0x08001400                TIM_SelectMasterSlaveMode
-                0x08001410                TIM_ETRConfig
-                0x08001424                TIM_EncoderInterfaceConfig
-                0x08001454                TIM_SelectHallSensor
-                0x08001470                TIM_RemapConfig
- .text          0x08001478      0x54c Libraries/libstm32f0.a(stm32f0xx_usart.o)
-                0x08001478                USART_DeInit
-                0x080014bc                USART_Init
-                0x0800155c                USART_StructInit
-                0x08001574                USART_ClockInit
-                0x08001594                USART_ClockStructInit
-                0x080015a0                USART_Cmd
-                0x080015bc                USART_DirectionModeCmd
-                0x080015d0                USART_OverSampling8Cmd
-                0x080015f0                USART_OneBitMethodCmd
-                0x08001610                USART_MSBFirstCmd
-                0x08001630                USART_DataInvCmd
-                0x08001650                USART_InvPinCmd
-                0x08001664                USART_SWAPPinCmd
-                0x08001684                USART_ReceiverTimeOutCmd
-                0x080016a4                USART_SetReceiverTimeOut
-                0x080016b4                USART_SetPrescaler
-                0x080016c4                USART_STOPModeCmd
-                0x080016e0                USART_StopModeWakeUpSourceConfig
-                0x080016f4                USART_AutoBaudRateCmd
-                0x08001714                USART_AutoBaudRateConfig
-                0x08001728                USART_SendData
-                0x08001730                USART_ReceiveData
-                0x08001738                USART_SetAddress
-                0x0800174c                USART_MuteModeCmd
-                0x0800176c                USART_MuteModeWakeUpConfig
-                0x08001780                USART_AddressDetectionConfig
-                0x08001790                USART_LINBreakDetectLengthConfig
-                0x080017a0                USART_LINCmd
-                0x080017c0                USART_HalfDuplexCmd
-                0x080017dc                USART_SetGuardTime
-                0x080017f0                USART_SmartCardCmd
-                0x0800180c                USART_SmartCardNACKCmd
-                0x08001828                USART_SetAutoRetryCount
-                0x08001840                USART_SetBlockLength
-                0x08001854                USART_IrDAConfig
-                0x08001864                USART_IrDACmd
-                0x08001880                USART_DECmd
-                0x080018a0                USART_DEPolarityConfig
-                0x080018b4                USART_SetDEAssertionTime
-                0x080018cc                USART_SetDEDeassertionTime
-                0x080018e4                USART_DMACmd
-                0x080018f8                USART_DMAReceptionErrorConfig
-                0x0800190c                USART_ITConfig
-                0x08001940                USART_RequestCmd
-                0x08001954                USART_OverrunDetectionConfig
-                0x08001968                USART_GetFlagStatus
-                0x08001974                USART_ClearFlag
-                0x08001978                USART_GetITStatus
-                0x080019b8                USART_ClearITPendingBit
- .text          0x080019c4       0x9c /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
-                0x080019c4                __udivsi3
-                0x080019c4                __aeabi_uidiv
-                0x08001a4c                __aeabi_uidivmod
- .text          0x08001a60        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
-                0x08001a60                __aeabi_ldiv0
-                0x08001a60                __aeabi_idiv0
- .text          0x08001a64       0x44 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
-                0x08001a64                __libc_init_array
+ .text          0x080008b0      0x54c Libraries/libstm32f0.a(stm32f0xx_usart.o)
+                0x080008b0                USART_DeInit
+                0x080008f4                USART_Init
+                0x08000994                USART_StructInit
+                0x080009ac                USART_ClockInit
+                0x080009cc                USART_ClockStructInit
+                0x080009d8                USART_Cmd
+                0x080009f4                USART_DirectionModeCmd
+                0x08000a08                USART_OverSampling8Cmd
+                0x08000a28                USART_OneBitMethodCmd
+                0x08000a48                USART_MSBFirstCmd
+                0x08000a68                USART_DataInvCmd
+                0x08000a88                USART_InvPinCmd
+                0x08000a9c                USART_SWAPPinCmd
+                0x08000abc                USART_ReceiverTimeOutCmd
+                0x08000adc                USART_SetReceiverTimeOut
+                0x08000aec                USART_SetPrescaler
+                0x08000afc                USART_STOPModeCmd
+                0x08000b18                USART_StopModeWakeUpSourceConfig
+                0x08000b2c                USART_AutoBaudRateCmd
+                0x08000b4c                USART_AutoBaudRateConfig
+                0x08000b60                USART_SendData
+                0x08000b68                USART_ReceiveData
+                0x08000b70                USART_SetAddress
+                0x08000b84                USART_MuteModeCmd
+                0x08000ba4                USART_MuteModeWakeUpConfig
+                0x08000bb8                USART_AddressDetectionConfig
+                0x08000bc8                USART_LINBreakDetectLengthConfig
+                0x08000bd8                USART_LINCmd
+                0x08000bf8                USART_HalfDuplexCmd
+                0x08000c14                USART_SetGuardTime
+                0x08000c28                USART_SmartCardCmd
+                0x08000c44                USART_SmartCardNACKCmd
+                0x08000c60                USART_SetAutoRetryCount
+                0x08000c78                USART_SetBlockLength
+                0x08000c8c                USART_IrDAConfig
+                0x08000c9c                USART_IrDACmd
+                0x08000cb8                USART_DECmd
+                0x08000cd8                USART_DEPolarityConfig
+                0x08000cec                USART_SetDEAssertionTime
+                0x08000d04                USART_SetDEDeassertionTime
+                0x08000d1c                USART_DMACmd
+                0x08000d30                USART_DMAReceptionErrorConfig
+                0x08000d44                USART_ITConfig
+                0x08000d78                USART_RequestCmd
+                0x08000d8c                USART_OverrunDetectionConfig
+                0x08000da0                USART_GetFlagStatus
+                0x08000dac                USART_ClearFlag
+                0x08000db0                USART_GetITStatus
+                0x08000df0                USART_ClearITPendingBit
+ .text          0x08000dfc       0x9c /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
+                0x08000dfc                __udivsi3
+                0x08000dfc                __aeabi_uidiv
+                0x08000e84                __aeabi_uidivmod
+ .text          0x08000e98        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
+                0x08000e98                __aeabi_ldiv0
+                0x08000e98                __aeabi_idiv0
+ .text          0x08000e9c       0x44 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
+                0x08000e9c                __libc_init_array
  *(.text.*)
  .text.USART1_Config
-                0x08001aa8       0x98 /tmp/ccQlanhz.o
-                0x08001aa8                USART1_Config
+                0x08000ee0       0x98 /tmp/ccCEshbj.o
+                0x08000ee0                USART1_Config
  .text.USART2_Config
-                0x08001b40       0x94 /tmp/ccQlanhz.o
-                0x08001b40                USART2_Config
+                0x08000f78       0x94 /tmp/ccCEshbj.o
+                0x08000f78                USART2_Config
  .text.LED_Config
-                0x08001bd4       0x30 /tmp/ccQlanhz.o
-                0x08001bd4                LED_Config
- .text.TIMER_Config
-                0x08001c04       0x54 /tmp/ccQlanhz.o
-                0x08001c04                TIMER_Config
+                0x0800100c       0x30 /tmp/ccCEshbj.o
+                0x0800100c                LED_Config
  .text.USART2_SetSpeed
-                0x08001c58       0x38 /tmp/ccQlanhz.o
-                0x08001c58                USART2_SetSpeed
- .text.TReset   0x08001c90       0x30 /tmp/ccQlanhz.o
-                0x08001c90                TReset
+                0x0800103c       0x38 /tmp/ccCEshbj.o
+                0x0800103c                USART2_SetSpeed
+ .text.TReset   0x08001074       0x30 /tmp/ccCEshbj.o
+                0x08001074                TReset
  .text.TWriteByte
-                0x08001cc0       0x40 /tmp/ccQlanhz.o
-                0x08001cc0                TWriteByte
+                0x080010a4       0x34 /tmp/ccCEshbj.o
+                0x080010a4                TWriteByte
  .text.TReadByte
-                0x08001d00       0x50 /tmp/ccQlanhz.o
-                0x08001d00                TReadByte
+                0x080010d8       0x40 /tmp/ccCEshbj.o
+                0x080010d8                TReadByte
  .text.TReadBit
-                0x08001d50       0x30 /tmp/ccQlanhz.o
-                0x08001d50                TReadBit
+                0x08001118       0x30 /tmp/ccCEshbj.o
+                0x08001118                TReadBit
+ .text.ConvertTemp
+                0x08001148       0x24 /tmp/ccCEshbj.o
+                0x08001148                ConvertTemp
+ .text.ReadTemp
+                0x0800116c       0x54 /tmp/ccCEshbj.o
+                0x0800116c                ReadTemp
  .text.startup.main
-                0x08001d80       0xb8 /tmp/ccQlanhz.o
-                0x08001d80                main
+                0x080011c0       0xa4 /tmp/ccCEshbj.o
+                0x080011c0                main
  .text.SystemInit
-                0x08001e38       0xf4 /tmp/ccGt0kYY.o
-                0x08001e38                SystemInit
+                0x08001264       0xf4 /tmp/ccoho9K5.o
+                0x08001264                SystemInit
  .text.NMI_Handler
-                0x08001f2c        0x2 /tmp/ccCUIUyv.o
-                0x08001f2c                NMI_Handler
+                0x08001358        0x2 /tmp/cc4A3QbZ.o
+                0x08001358                NMI_Handler
  .text.HardFault_Handler
-                0x08001f2e        0x4 /tmp/ccCUIUyv.o
-                0x08001f2e                HardFault_Handler
+                0x0800135a        0x4 /tmp/cc4A3QbZ.o
+                0x0800135a                HardFault_Handler
  .text.SVC_Handler
-                0x08001f32        0x2 /tmp/ccCUIUyv.o
-                0x08001f32                SVC_Handler
+                0x0800135e        0x2 /tmp/cc4A3QbZ.o
+                0x0800135e                SVC_Handler
  .text.PendSV_Handler
-                0x08001f34        0x2 /tmp/ccCUIUyv.o
-                0x08001f34                PendSV_Handler
- .text.SysTick_Handler
-                0x08001f36        0x2 /tmp/ccCUIUyv.o
-                0x08001f36                SysTick_Handler
+                0x08001360        0x2 /tmp/cc4A3QbZ.o
+                0x08001360                PendSV_Handler
+ *fill*         0x08001362        0x2 
  .text.USART1_IRQHandler
-                0x08001f38       0x74 /tmp/ccCUIUyv.o
-                0x08001f38                USART1_IRQHandler
+                0x08001364       0x84 /tmp/cc4A3QbZ.o
+                0x08001364                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x08001fac       0x68 /tmp/ccCUIUyv.o
-                0x08001fac                USART2_IRQHandler
- .text.TIM3_IRQHandler
-                0x08002014       0x30 /tmp/ccCUIUyv.o
-                0x08002014                TIM3_IRQHandler
+                0x080013e8       0x68 /tmp/cc4A3QbZ.o
+                0x080013e8                USART2_IRQHandler
+ .text.SysTick_Handler
+                0x08001450       0x48 /tmp/cc4A3QbZ.o
+                0x08001450                SysTick_Handler
  .text.Reset_Handler
-                0x08002044       0x50 /tmp/cckAGAr0.o
-                0x08002044                Reset_Handler
+                0x08001498       0x50 /tmp/ccaGkBoT.o
+                0x08001498                Reset_Handler
  .text.Default_Handler
-                0x08002094        0x2 /tmp/cckAGAr0.o
-                0x08002094                TIM1_CC_IRQHandler
-                0x08002094                ADC1_COMP_IRQHandler
-                0x08002094                PVD_IRQHandler
-                0x08002094                I2C1_IRQHandler
-                0x08002094                SPI1_IRQHandler
-                0x08002094                TIM6_DAC_IRQHandler
-                0x08002094                EXTI2_3_IRQHandler
-                0x08002094                I2C2_IRQHandler
-                0x08002094                TIM17_IRQHandler
-                0x08002094                RTC_IRQHandler
-                0x08002094                TIM16_IRQHandler
-                0x08002094                EXTI4_15_IRQHandler
-                0x08002094                RCC_IRQHandler
-                0x08002094                DMA1_Channel1_IRQHandler
-                0x08002094                Default_Handler
-                0x08002094                CEC_IRQHandler
-                0x08002094                TIM14_IRQHandler
-                0x08002094                DMA1_Channel4_5_IRQHandler
-                0x08002094                TIM15_IRQHandler
-                0x08002094                EXTI0_1_IRQHandler
-                0x08002094                SPI2_IRQHandler
-                0x08002094                TS_IRQHandler
-                0x08002094                WWDG_IRQHandler
-                0x08002094                TIM2_IRQHandler
-                0x08002094                DMA1_Channel2_3_IRQHandler
-                0x08002094                FLASH_IRQHandler
-                0x08002094                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x080014e8        0x2 /tmp/ccaGkBoT.o
+                0x080014e8                TIM1_CC_IRQHandler
+                0x080014e8                ADC1_COMP_IRQHandler
+                0x080014e8                PVD_IRQHandler
+                0x080014e8                I2C1_IRQHandler
+                0x080014e8                SPI1_IRQHandler
+                0x080014e8                TIM6_DAC_IRQHandler
+                0x080014e8                EXTI2_3_IRQHandler
+                0x080014e8                I2C2_IRQHandler
+                0x080014e8                TIM17_IRQHandler
+                0x080014e8                RTC_IRQHandler
+                0x080014e8                TIM16_IRQHandler
+                0x080014e8                TIM3_IRQHandler
+                0x080014e8                EXTI4_15_IRQHandler
+                0x080014e8                RCC_IRQHandler
+                0x080014e8                DMA1_Channel1_IRQHandler
+                0x080014e8                Default_Handler
+                0x080014e8                CEC_IRQHandler
+                0x080014e8                TIM14_IRQHandler
+                0x080014e8                DMA1_Channel4_5_IRQHandler
+                0x080014e8                TIM15_IRQHandler
+                0x080014e8                EXTI0_1_IRQHandler
+                0x080014e8                SPI2_IRQHandler
+                0x080014e8                TS_IRQHandler
+                0x080014e8                WWDG_IRQHandler
+                0x080014e8                TIM2_IRQHandler
+                0x080014e8                DMA1_Channel2_3_IRQHandler
+                0x080014e8                FLASH_IRQHandler
+                0x080014e8                TIM1_BRK_UP_TRG_COM_IRQHandler
  *(.rodata)
  *(.rodata*)
  *(.glue_7)
@@ -418,80 +330,89 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.init)
- *fill*         0x08002096        0x2 
- .init          0x08002098        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
-                0x08002098                _init
- .init          0x0800209c        0x8 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
+ *fill*         0x080014ea        0x2 
+ .init          0x080014ec        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
+                0x080014ec                _init
+ .init          0x080014f0        0x8 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
  *(.fini)
- .fini          0x080020a4        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
-                0x080020a4                _fini
- .fini          0x080020a8        0x8 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
-                0x080020b0                . = ALIGN (0x4)
-                0x080020b0                _etext = .
-                0x080020b0                _sidata = _etext
+ .fini          0x080014f8        0x4 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
+                0x080014f8                _fini
+ .fini          0x080014fc        0x8 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
+                0x08001504                . = ALIGN (0x4)
+                0x08001504                _etext = .
+                0x08001504                _sidata = _etext
 
-.vfp11_veneer   0x080020b0        0x0
+.vfp11_veneer   0x08001504        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x080020b0        0x0
+.v4_bx          0x08001504        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x080020b0        0x0
+.iplt           0x08001504        0x0
  .iplt          0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
 
-.rel.dyn        0x080020b0        0x0
+.rel.dyn        0x08001504        0x0
  .rel.iplt      0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
 
-.data           0x20000000       0x14 load address 0x080020b0
+.data           0x20000000       0x14 load address 0x08001504
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
                 0x20000000                _data = .
  *(.data)
  .data          0x20000000       0x10 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
  *(.data.*)
- .data.zprava   0x20000010        0x1 /tmp/ccCUIUyv.o
-                0x20000010                zprava
+ .data.SystemCoreClock
+                0x20000010        0x4 /tmp/ccoho9K5.o
+                0x20000010                SystemCoreClock
  *(.RAMtext)
                 0x20000014                . = ALIGN (0x4)
- *fill*         0x20000011        0x3 
                 0x20000014                _edata = .
 
-.igot.plt       0x20000014        0x0 load address 0x080020c4
+.igot.plt       0x20000014        0x0 load address 0x08001518
  .igot.plt      0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
 
-.bss            0x20000014       0x10 load address 0x080020c4
+.bss            0x20000014       0x24 load address 0x08001518
                 0x20000014                . = ALIGN (0x4)
                 0x20000014                _sbss = .
                 0x20000014                _bss = .
  *(.bss)
  *(.bss.*)
- .bss.done      0x20000014        0x4 /tmp/ccCUIUyv.o
+ .bss.done      0x20000014        0x4 /tmp/cc4A3QbZ.o
                 0x20000014                done
- .bss.count     0x20000018        0x4 /tmp/ccCUIUyv.o
-                0x20000018                count
- .bss.input     0x2000001c        0x1 /tmp/ccCUIUyv.o
-                0x2000001c                input
- *fill*         0x2000001d        0x3 
- .bss.c         0x20000020        0x4 /tmp/ccCUIUyv.o
-                0x20000020                c
+ .bss.temperature
+                0x20000018        0x1 /tmp/cc4A3QbZ.o
+                0x20000018                temperature
+ *fill*         0x20000019        0x3 
+ .bss.count     0x2000001c        0x4 /tmp/cc4A3QbZ.o
+                0x2000001c                count
+ .bss.input     0x20000020        0x1 /tmp/cc4A3QbZ.o
+                0x20000020                input
+ *fill*         0x20000021        0x3 
+ .bss.c         0x20000024        0x4 /tmp/cc4A3QbZ.o
+                0x20000024                c
  *(COMMON)
-                0x20000024                . = ALIGN (0x4)
-                0x20000024                _ebss = .
-                0x20000024                PROVIDE (end, _ebss)
-                0x20000024                PROVIDE (_end, _ebss)
-                0x20000024                __exidx_start = .
-                0x20000024                __exidx_end = .
+ COMMON         0x20000028        0x9 /tmp/ccCEshbj.o
+                0x20000028                scratchpad
+ *fill*         0x20000031        0x3 
+ COMMON         0x20000034        0x4 /tmp/cc4A3QbZ.o
+                0x20000034                commands
+                0x20000038                . = ALIGN (0x4)
+                0x20000038                _ebss = .
+                0x20000038                PROVIDE (end, _ebss)
+                0x20000038                PROVIDE (_end, _ebss)
+                0x20000038                __exidx_start = .
+                0x20000038                __exidx_end = .
 
 ._user_heap_stack
-                0x20000024      0x800 load address 0x080020d4
-                0x20000024                . = ALIGN (0x4)
-                0x20000024                PROVIDE (end, .)
-                0x20000024                PROVIDE (_end, .)
-                0x20000424                . = (. + _Min_Heap_Size)
- *fill*         0x20000024      0x400 
-                0x20000824                . = (. + _Min_Stack_Size)
- *fill*         0x20000424      0x400 
-                0x20000824                . = ALIGN (0x4)
+                0x20000038      0x800 load address 0x0800153c
+                0x20000038                . = ALIGN (0x4)
+                0x20000038                PROVIDE (end, .)
+                0x20000038                PROVIDE (_end, .)
+                0x20000438                . = (. + _Min_Heap_Size)
+ *fill*         0x20000038      0x400 
+                0x20000838                . = (. + _Min_Stack_Size)
+ *fill*         0x20000438      0x400 
+                0x20000838                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -518,14 +439,13 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 /tmp/ccQlanhz.o
+ .comment       0x00000000       0x30 /tmp/ccCEshbj.o
                                  0x31 (size before relaxing)
- .comment       0x00000000       0x31 /tmp/ccGt0kYY.o
- .comment       0x00000000       0x31 /tmp/ccCUIUyv.o
+ .comment       0x00000000       0x31 /tmp/ccoho9K5.o
+ .comment       0x00000000       0x31 /tmp/cc4A3QbZ.o
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_tim.o)
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
 .ARM.attributes
@@ -533,13 +453,13 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .ARM.attributes
                 0x00000000       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
  .ARM.attributes
-                0x0000001d       0x31 /tmp/ccQlanhz.o
+                0x0000001d       0x31 /tmp/ccCEshbj.o
  .ARM.attributes
-                0x0000004e       0x31 /tmp/ccGt0kYY.o
+                0x0000004e       0x31 /tmp/ccoho9K5.o
  .ARM.attributes
-                0x0000007f       0x31 /tmp/ccCUIUyv.o
+                0x0000007f       0x31 /tmp/cc4A3QbZ.o
  .ARM.attributes
-                0x000000b0       0x21 /tmp/cckAGAr0.o
+                0x000000b0       0x21 /tmp/ccaGkBoT.o
  .ARM.attributes
                 0x000000d1       0x31 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .ARM.attributes
@@ -547,17 +467,15 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .ARM.attributes
                 0x00000133       0x31 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
  .ARM.attributes
-                0x00000164       0x31 Libraries/libstm32f0.a(stm32f0xx_tim.o)
+                0x00000164       0x31 Libraries/libstm32f0.a(stm32f0xx_usart.o)
  .ARM.attributes
-                0x00000195       0x31 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+                0x00000195       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x000001c6       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
+                0x000001b2       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x000001e3       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
+                0x000001cf       0x2b /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
  .ARM.attributes
-                0x00000200       0x2b /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
- .ARM.attributes
-                0x0000022b       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
+                0x000001fa       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtn.o
 
 .debug
  *(.debug)
@@ -571,16 +489,16 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x1b0
+.debug_aranges  0x00000000      0x190
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x68 /tmp/ccQlanhz.o
+                0x00000000       0x70 /tmp/ccCEshbj.o
  .debug_aranges
-                0x00000068       0x28 /tmp/ccGt0kYY.o
+                0x00000070       0x28 /tmp/ccoho9K5.o
  .debug_aranges
-                0x00000090       0x58 /tmp/ccCUIUyv.o
+                0x00000098       0x50 /tmp/cc4A3QbZ.o
  .debug_aranges
-                0x000000e8       0x28 /tmp/cckAGAr0.o
+                0x000000e8       0x28 /tmp/ccaGkBoT.o
  .debug_aranges
                 0x00000110       0x20 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .debug_aranges
@@ -588,91 +506,82 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .debug_aranges
                 0x00000150       0x20 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
  .debug_aranges
-                0x00000170       0x20 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_aranges
-                0x00000190       0x20 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+                0x00000170       0x20 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6650
+.debug_info     0x00000000     0x3ed7
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x100c /tmp/ccQlanhz.o
- .debug_info    0x0000100c      0x332 /tmp/ccGt0kYY.o
- .debug_info    0x0000133e      0x7db /tmp/ccCUIUyv.o
- .debug_info    0x00001b19       0x5a /tmp/cckAGAr0.o
- .debug_info    0x00001b73      0x735 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_info    0x000022a8      0x39c Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_info    0x00002644      0xa88 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_info    0x000030cc     0x25a6 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_info    0x00005672      0xfde Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_info    0x00000000      0xf87 /tmp/ccCEshbj.o
+ .debug_info    0x00000f87      0x332 /tmp/ccoho9K5.o
+ .debug_info    0x000012b9      0x68d /tmp/cc4A3QbZ.o
+ .debug_info    0x00001946       0x5a /tmp/ccaGkBoT.o
+ .debug_info    0x000019a0      0x735 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_info    0x000020d5      0x39c Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_info    0x00002471      0xa88 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_info    0x00002ef9      0xfde Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
-.debug_abbrev   0x00000000      0xf13
+.debug_abbrev   0x00000000      0xd2c
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x203 /tmp/ccQlanhz.o
- .debug_abbrev  0x00000203      0x150 /tmp/ccGt0kYY.o
- .debug_abbrev  0x00000353      0x15f /tmp/ccCUIUyv.o
- .debug_abbrev  0x000004b2       0x12 /tmp/cckAGAr0.o
- .debug_abbrev  0x000004c4      0x1ec Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_abbrev  0x000006b0      0x136 Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_abbrev  0x000007e6      0x266 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_abbrev  0x00000a4c      0x2c6 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_abbrev  0x00000d12      0x201 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_abbrev  0x00000000      0x2a3 /tmp/ccCEshbj.o
+ .debug_abbrev  0x000002a3      0x150 /tmp/ccoho9K5.o
+ .debug_abbrev  0x000003f3      0x19e /tmp/cc4A3QbZ.o
+ .debug_abbrev  0x00000591       0x12 /tmp/ccaGkBoT.o
+ .debug_abbrev  0x000005a3      0x1ec Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_abbrev  0x0000078f      0x136 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_abbrev  0x000008c5      0x266 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_abbrev  0x00000b2b      0x201 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
-.debug_line     0x00000000     0x1712
+.debug_line     0x00000000     0x10ad
  *(.debug_line)
- .debug_line    0x00000000      0x303 /tmp/ccQlanhz.o
- .debug_line    0x00000303      0x14e /tmp/ccGt0kYY.o
- .debug_line    0x00000451      0x1c9 /tmp/ccCUIUyv.o
- .debug_line    0x0000061a       0x7d /tmp/cckAGAr0.o
- .debug_line    0x00000697      0x1d7 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_line    0x0000086e      0x169 Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_line    0x000009d7      0x347 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_line    0x00000d1e      0x680 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_line    0x0000139e      0x374 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_line    0x00000000      0x340 /tmp/ccCEshbj.o
+ .debug_line    0x00000340      0x14e /tmp/ccoho9K5.o
+ .debug_line    0x0000048e      0x1a7 /tmp/cc4A3QbZ.o
+ .debug_line    0x00000635       0x7d /tmp/ccaGkBoT.o
+ .debug_line    0x000006b2      0x1d7 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_line    0x00000889      0x169 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_line    0x000009f2      0x347 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_line    0x00000d39      0x374 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
-.debug_frame    0x00000000     0x11b8
+.debug_frame    0x00000000      0xaf4
  *(.debug_frame)
- .debug_frame   0x00000000      0x12c /tmp/ccQlanhz.o
- .debug_frame   0x0000012c       0x48 /tmp/ccGt0kYY.o
- .debug_frame   0x00000174       0xb0 /tmp/ccCUIUyv.o
- .debug_frame   0x00000224      0x11c Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_frame   0x00000340       0x5c Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_frame   0x0000039c      0x320 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_frame   0x000006bc      0x6c0 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_frame   0x00000d7c      0x3f0 Libraries/libstm32f0.a(stm32f0xx_usart.o)
- .debug_frame   0x0000116c       0x20 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
- .debug_frame   0x0000118c       0x2c /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
+ .debug_frame   0x00000000      0x138 /tmp/ccCEshbj.o
+ .debug_frame   0x00000138       0x48 /tmp/ccoho9K5.o
+ .debug_frame   0x00000180       0xa0 /tmp/cc4A3QbZ.o
+ .debug_frame   0x00000220      0x11c Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_frame   0x0000033c       0x5c Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_frame   0x00000398      0x320 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_frame   0x000006b8      0x3f0 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_frame   0x00000aa8       0x20 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000ac8       0x2c /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
 
-.debug_str      0x00000000     0x20d8
+.debug_str      0x00000000     0x155c
  *(.debug_str)
- .debug_str     0x00000000      0x7ad /tmp/ccQlanhz.o
-                                0x7eb (size before relaxing)
- .debug_str     0x000007ad      0x104 /tmp/ccGt0kYY.o
+ .debug_str     0x00000000      0x722 /tmp/ccCEshbj.o
+                                0x769 (size before relaxing)
+ .debug_str     0x00000722       0xf4 /tmp/ccoho9K5.o
                                 0x1ea (size before relaxing)
- .debug_str     0x000008b1       0xcb /tmp/ccCUIUyv.o
-                                0x2ec (size before relaxing)
- .debug_str     0x0000097c      0x1a2 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_str     0x00000816       0xad /tmp/cc4A3QbZ.o
+                                0x269 (size before relaxing)
+ .debug_str     0x000008c3      0x19d Libraries/libstm32f0.a(stm32f0xx_gpio.o)
                                 0x42a (size before relaxing)
- .debug_str     0x00000b1e      0x104 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_str     0x00000a60       0xa0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
                                 0x279 (size before relaxing)
- .debug_str     0x00000c22      0x463 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_str     0x00000b00      0x463 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
                                 0x69d (size before relaxing)
- .debug_str     0x00001085      0xa5a Libraries/libstm32f0.a(stm32f0xx_tim.o)
-                                0xd84 (size before relaxing)
- .debug_str     0x00001adf      0x5f9 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_str     0x00000f63      0x5f9 Libraries/libstm32f0.a(stm32f0xx_usart.o)
                                 0x90b (size before relaxing)
 
-.debug_loc      0x00000000     0x4799
+.debug_loc      0x00000000     0x20aa
  *(.debug_loc)
- .debug_loc     0x00000000      0x257 /tmp/ccQlanhz.o
- .debug_loc     0x00000257      0x19e /tmp/ccGt0kYY.o
- .debug_loc     0x000003f5       0x80 /tmp/ccCUIUyv.o
- .debug_loc     0x00000475      0x3f9 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_loc     0x0000086e      0x130 Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_loc     0x0000099e      0xa8b Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_loc     0x00001429     0x2768 Libraries/libstm32f0.a(stm32f0xx_tim.o)
- .debug_loc     0x00003b91      0xc08 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_loc     0x00000000      0x2bd /tmp/ccCEshbj.o
+ .debug_loc     0x000002bd      0x19e /tmp/ccoho9K5.o
+ .debug_loc     0x0000045b       0x93 /tmp/cc4A3QbZ.o
+ .debug_loc     0x000004ee      0x3f9 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_loc     0x000008e7      0x130 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_loc     0x00000a17      0xa8b Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_loc     0x000014a2      0xc08 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -690,9 +599,8 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  *(.debug_varnames)
 OUTPUT(main.elf elf32-littlearm)
 
-.debug_ranges   0x00000000      0x360
- .debug_ranges  0x00000000       0x58 /tmp/ccQlanhz.o
- .debug_ranges  0x00000058       0x48 /tmp/ccGt0kYY.o
- .debug_ranges  0x000000a0       0x48 /tmp/ccCUIUyv.o
- .debug_ranges  0x000000e8       0x20 /tmp/cckAGAr0.o
- .debug_ranges  0x00000108      0x258 Libraries/libstm32f0.a(stm32f0xx_tim.o)
+.debug_ranges   0x00000000      0x138
+ .debug_ranges  0x00000000       0x90 /tmp/ccCEshbj.o
+ .debug_ranges  0x00000090       0x48 /tmp/ccoho9K5.o
+ .debug_ranges  0x000000d8       0x40 /tmp/cc4A3QbZ.o
+ .debug_ranges  0x00000118       0x20 /tmp/ccaGkBoT.o

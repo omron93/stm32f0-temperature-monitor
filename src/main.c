@@ -1,10 +1,13 @@
 #include "main.h"
 
-extern long c;
+extern long count;
 extern volatile char input;
+extern volatile char temperature;
 
-extern volatile char zprava;
 extern volatile int done;
+extern volatile int commands[1];
+
+char scratchpad[9];
 
 int main(void)
 {
@@ -13,45 +16,33 @@ int main(void)
   USART1_Config();
   USART2_Config();
   
-  TIMER_Config();
-
-
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
   
-  TReset();
-  USART2_SetSpeed(115200);
-  TWriteByte(0xCC);
-  TWriteByte(0x44);
-  //Convert temperature
-  zprava = TReadBit();
-  int x =0;
-  while(zprava == 0)
-    {
-      x++;
-      GPIOC->ODR |= GPIO_Pin_9;
-      zprava = TReadBit();
-    }
-  zprava =x;
+  ConvertTemp();
+  ReadTemp();
   
-  TReset();
-  USART2_SetSpeed(115200);
-  TWriteByte(0xCC);
-  TWriteByte(0xBE);
-  char scratchpad[9];
-  for(int i = 0; i < 9; i++)
-    {
-      scratchpad[i] = TReadByte();
-    }
-  input = scratchpad[0];
-  zprava = scratchpad[1];
-  
-  //GPIOC->ODR ^= GPIO_Pin_8;
-  
+  if (SysTick_Config(SystemCoreClock / 125))  //2s
+  { 
+    /* Capture error */ 
+    while (1);
+  }
 
   /* Infinite loop */
   while (1)
     {
+      if(commands[0])
+        {
+          switch(commands[0])
+            {
+              case CONVERT:
+                ConvertTemp();
+                ReadTemp();
+                GPIOC->ODR ^= GPIO_Pin_9;
+                break;
+            }
+        }
+          
     }
 }
 
@@ -62,7 +53,7 @@ void USART1_Config(void)
     NVIC_InitTypeDef NVIC_InitStructure;
 
     NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelPriority = 1;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
 
@@ -179,35 +170,6 @@ void LED_Config(void)
 
   }
 
-void TIMER_Config(void)
-  {
-    NVIC_InitTypeDef NVIC_InitStructure;
-    TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
-
-    // TIM3 clock enable
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
-
-    // Enable the TIM3 gloabal Interrupt
-    NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-    NVIC_Init(&NVIC_InitStructure);
-
-
-    TIM_TimeBaseStructure.TIM_Period = 0xFFFF;
-    TIM_TimeBaseStructure.TIM_Prescaler = 100;
-    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-    TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-
-    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
-
-    TIM_ITConfig(TIM3, TIM_IT_CC1, ENABLE);
-
-    TIM_Cmd(TIM3, ENABLE);
-
-  }
-
-
 void USART2_SetSpeed(int speed)
   {
     USART_Cmd(USART2, DISABLE);
@@ -249,8 +211,6 @@ void TWriteByte(char data)
           USART_SendData(USART2, 0x00);
         
         while(done);
-        
-        zprava = data & 0x01;
         data >>= 1;
       }
   }
@@ -267,7 +227,7 @@ char TReadByte(void)
         while(done);
         if((unsigned char)input == 0xFF)
           {
-            GPIOC->ODR |= GPIO_Pin_8;
+            //GPIOC->ODR |= GPIO_Pin_8;
             data |= 0x80;
           }
       }
@@ -286,4 +246,37 @@ char TReadBit(void)
         return 1;
       }
     return 0;
+  }
+  
+void ConvertTemp(void)
+  {
+    char temp;
+    
+    TReset();
+    USART2_SetSpeed(115200);
+    TWriteByte(0xCC);
+    TWriteByte(0x44);
+    temp = TReadBit();
+    while(temp == 0)
+    {
+      //GPIOC->ODR |= GPIO_Pin_9;
+      temp = TReadBit();
+    }
+  }
+  
+void ReadTemp(void)
+  {
+    TReset();
+    USART2_SetSpeed(115200);
+    TWriteByte(0xCC);
+    TWriteByte(0xBE);
+    //char scratchpad[9];
+    for(int i = 0; i < 9; i++)
+      {
+        scratchpad[i] = TReadByte();
+      }
+    temperature = 0;
+    temperature |= ((scratchpad[0] >> 4) & 0x0f);
+    temperature |= ((scratchpad[1] & 0x07) << 4);
+    
   }

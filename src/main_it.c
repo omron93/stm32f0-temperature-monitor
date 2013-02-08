@@ -4,9 +4,10 @@
 int count = 0;
 long c = 0;
 volatile char input = 0;   //input in binary mode
+volatile char temperature = 0;
 
+int commands[1];
 volatile int done = 0;
-volatile char zprava = -1;
 
 void NMI_Handler(void)
   {
@@ -28,10 +29,6 @@ void PendSV_Handler(void)
   {
   }
 
-void SysTick_Handler(void)
-  {
-  }
-
 void USART1_IRQHandler(void)
   {
   /*
@@ -42,17 +39,22 @@ void USART1_IRQHandler(void)
     if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
       {
         //char in = (USART_ReceiveData(USART1));
-        USART_ReceiveData(USART1);
+        char command = USART_ReceiveData(USART1);
 
-        //if(in == 255)
+        if(command == GETTEMP)
+          {
+            USART_SendData(USART1, temperature);
+          }
+        else
+          {
+            USART_SendData(USART1, commands[0]);
+          }
         //  GPIOC->ODR ^= GPIO_Pin_9;
 
         USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
         USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
         
-        //USART_SendData(USART2, 0xF0);
-        USART_SendData(USART1, input);
-        USART_SendData(USART1, zprava);
+        USART_SendData(USART1, count);
 
       }
 
@@ -88,14 +90,17 @@ void USART2_IRQHandler(void)
       }
   }
 
-void TIM3_IRQHandler(void)
-{
-  c++;
-  if(c == 100)
-    {
-      //GPIOC->ODR ^= GPIO_Pin_8;
-      c = 0;
-    }
-  count++;
-  TIM_ClearITPendingBit(TIM3, TIM_IT_CC1);
-}
+void SysTick_Handler(void)
+  {
+    c++;
+    if(c == 250)
+      {
+        GPIOC->ODR ^= GPIO_Pin_8;
+        if(!commands[0])
+          {
+            commands[0] = CONVERT;
+          }
+        count++;
+        c = 0;
+      }
+  }
