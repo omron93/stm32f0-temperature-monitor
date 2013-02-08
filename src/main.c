@@ -1,11 +1,10 @@
 #include "main.h"
 
 extern long c;
-extern int binary;
 extern long input;
-int rx = 0;
 
-char x = 2;
+extern volatile char zprava;
+extern volatile int done;
 
 int main(void)
 {
@@ -20,20 +19,25 @@ int main(void)
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
   
-  rx = 1;
+  //GPIOC->ODR ^= GPIO_Pin_8;
   USART_SendData(USART2, 0xF0);
-  //while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET);
+  while(done == 0);
+  //GPIOC->ODR ^= GPIO_Pin_8;
   
   USART2_SetSpeed(115200);
   
   //TWriteByte(0xCC);
   //TWriteByte(0xBE);
-  x = TReadByte();
+  //x = TReadByte();
+  done = 0;
+  USART_SendData(USART2, 0x00);
+  while(done == 0);
+  
+  TWriteByte(0xFF);
   
   
   
-  
-  //GPIOC->ODR ^= GPIO_Pin_8;
+  GPIOC->ODR ^= GPIO_Pin_8;
   
 
   /* Infinite loop */
@@ -215,23 +219,22 @@ void USART2_SetSpeed(int speed)
   }
 
 void TWriteByte(char data)
-  {
-    binary = 1;
-    
-    //rx = 1;
+  {    
     for(int i = 0; i < 8; i++)
       {
-        USART_SendData(USART2, data & 0x01);
-        //rx = 1;
-        while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET);
+        done = 0;
+        if(data & 0x01)
+          USART_SendData(USART2, 0xFF);
+        else
+          USART_SendData(USART2, 0x00);
         
+        while(done);
+        
+        zprava = data & 0x01;
         data >>= 1;
       }
-    //while(rx); 
-    
-    binary = 0;
   }
-  
+/*
 char TReadByte(void)
   {
     input = 0;
@@ -256,3 +259,4 @@ char TReadByte(void)
     return data;
   }
 
+*/
