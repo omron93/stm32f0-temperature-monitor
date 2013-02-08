@@ -12,6 +12,7 @@ void TIMER_Config(void);
 void USART2_SetSpeed(int);
 void TWriteByte(char);
 char TReadByte(void);
+char TReadBit(void);
 
 #endif
 

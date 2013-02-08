@@ -35,8 +35,8 @@ int main(void)
   while(done);*/
   
   TWriteByte(0xCC);
-  TWriteByte(0xBE);
-  zprava = TReadByte();
+  TWriteByte(0xB4);
+  zprava = TReadBit();
   
   
   
@@ -258,3 +258,15 @@ char TReadByte(void)
     return data;
   }
 
+char TReadBit(void)
+  {
+    done = 1;
+    USART_SendData(USART2, 0xFF);
+    while(done);
+    if((unsigned char)input == 0xFF)
+      {
+        GPIOC->ODR |= GPIO_Pin_8;
+        return 1;
+      }
+    return 0;
+  }
