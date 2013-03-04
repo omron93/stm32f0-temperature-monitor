@@ -6,7 +6,7 @@ long c = 0;
 volatile char input = 0;   //input in binary mode
 volatile char temperature = 0;
 
-int commands[1];
+int convert = 0;
 volatile int done = 0;
 
 void NMI_Handler(void)
@@ -47,15 +47,12 @@ void USART1_IRQHandler(void)
           }
         else
           {
-            USART_SendData(USART1, commands[0]);
+            USART_SendData(USART1, convert);
           }
         //  GPIOC->ODR ^= GPIO_Pin_9;
 
         USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
         USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
-        
-        USART_SendData(USART1, count);
-
       }
 
     if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET)
@@ -93,12 +90,12 @@ void USART2_IRQHandler(void)
 void SysTick_Handler(void)
   {
     c++;
-    if(c == 250)
+    if(c == 4)
       {
         GPIOC->ODR ^= GPIO_Pin_8;
-        if(!commands[0])
+        if(!convert)
           {
-            commands[0] = CONVERT;
+            convert = 1;
           }
         count++;
         c = 0;

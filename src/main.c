@@ -5,7 +5,7 @@ extern volatile char input;
 extern volatile char temperature;
 
 extern volatile int done;
-extern volatile int commands[1];
+extern volatile int convert;
 
 char scratchpad[9];
 
@@ -22,7 +22,7 @@ int main(void)
   ConvertTemp();
   ReadTemp();
   
-  if (SysTick_Config(SystemCoreClock / 125))  //2s
+  if (SysTick_Config(SystemCoreClock / 4))  //4/s
   { 
     /* Capture error */ 
     while (1);
@@ -31,16 +31,12 @@ int main(void)
   /* Infinite loop */
   while (1)
     {
-      if(commands[0])
+      if(convert)
         {
-          switch(commands[0])
-            {
-              case CONVERT:
-                ConvertTemp();
-                ReadTemp();
-                GPIOC->ODR ^= GPIO_Pin_9;
-                break;
-            }
+          ConvertTemp();
+          ReadTemp();
+          GPIOC->ODR ^= GPIO_Pin_9;
+          convert = 0;
         }
           
     }
