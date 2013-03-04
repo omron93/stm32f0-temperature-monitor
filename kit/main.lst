@@ -1,5 +1,5 @@
 
-main.elf:     file format elf32-littlearm
+kit/main.elf:     file format elf32-littlearm
 
 SYMBOL TABLE:
 08000000 l    d  .isr_vector	00000000 .isr_vector
@@ -17,7 +17,7 @@ SYMBOL TABLE:
 00000000 l    d  .debug_str	00000000 .debug_str
 00000000 l    d  .debug_loc	00000000 .debug_loc
 00000000 l    d  .debug_ranges	00000000 .debug_ranges
-00000000 l    df *ABS*	00000000 /tmp/ccvQec1W.o
+00000000 l    df *ABS*	00000000 /tmp/ccMs4IHL.o
 f108f85f l       *ABS*	00000000 BootRAM
 08001494 l       .text	00000000 LoopCopyDataInit
 0800148c l       .text	00000000 CopyDataInit

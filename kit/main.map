@@ -1,24 +1,24 @@
 Archive member included because of file (symbol)
 
 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
-                              /tmp/ccPawOCb.o (GPIO_Init)
+                              /tmp/cchQxkea.o (GPIO_Init)
 Libraries/libstm32f0.a(stm32f0xx_misc.o)
-                              /tmp/ccPawOCb.o (NVIC_Init)
+                              /tmp/cchQxkea.o (NVIC_Init)
 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
-                              /tmp/ccPawOCb.o (RCC_AHBPeriphClockCmd)
+                              /tmp/cchQxkea.o (RCC_AHBPeriphClockCmd)
 Libraries/libstm32f0.a(stm32f0xx_usart.o)
-                              /tmp/ccPawOCb.o (USART_Init)
+                              /tmp/cchQxkea.o (USART_Init)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
-                              /tmp/ccfiFOCm.o (__aeabi_uidiv)
+                              /tmp/ccCuRaki.o (__aeabi_uidiv)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_dvmd_tls.o)
                               /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
-                              /tmp/ccvQec1W.o (__libc_init_array)
+                              /tmp/ccMs4IHL.o (__libc_init_array)
 
 Allocating common symbols
 Common symbol       size              file
 
-scratchpad          0x9               /tmp/ccPawOCb.o
+scratchpad          0x9               /tmp/cchQxkea.o
 
 Discarded input sections
 
@@ -36,22 +36,22 @@ Discarded input sections
                 0x00000000        0x0 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
  .ARM.attributes
                 0x00000000       0x2b /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
- .text          0x00000000        0x0 /tmp/ccPawOCb.o
- .data          0x00000000        0x0 /tmp/ccPawOCb.o
- .bss           0x00000000        0x0 /tmp/ccPawOCb.o
- .text          0x00000000        0x0 /tmp/ccfiFOCm.o
- .data          0x00000000        0x0 /tmp/ccfiFOCm.o
- .bss           0x00000000        0x0 /tmp/ccfiFOCm.o
+ .text          0x00000000        0x0 /tmp/cchQxkea.o
+ .data          0x00000000        0x0 /tmp/cchQxkea.o
+ .bss           0x00000000        0x0 /tmp/cchQxkea.o
+ .text          0x00000000        0x0 /tmp/ccCuRaki.o
+ .data          0x00000000        0x0 /tmp/ccCuRaki.o
+ .bss           0x00000000        0x0 /tmp/ccCuRaki.o
  .text.SystemCoreClockUpdate
-                0x00000000       0x68 /tmp/ccfiFOCm.o
+                0x00000000       0x68 /tmp/ccCuRaki.o
  .data.AHBPrescTable
-                0x00000000       0x10 /tmp/ccfiFOCm.o
- .text          0x00000000        0x0 /tmp/ccVfhILE.o
- .data          0x00000000        0x0 /tmp/ccVfhILE.o
- .bss           0x00000000        0x0 /tmp/ccVfhILE.o
- .text          0x00000000       0x14 /tmp/ccvQec1W.o
- .data          0x00000000        0x0 /tmp/ccvQec1W.o
- .bss           0x00000000        0x0 /tmp/ccvQec1W.o
+                0x00000000       0x10 /tmp/ccCuRaki.o
+ .text          0x00000000        0x0 /tmp/ccdtNpWw.o
+ .data          0x00000000        0x0 /tmp/ccdtNpWw.o
+ .bss           0x00000000        0x0 /tmp/ccdtNpWw.o
+ .text          0x00000000       0x14 /tmp/ccMs4IHL.o
+ .data          0x00000000        0x0 /tmp/ccMs4IHL.o
+ .bss           0x00000000        0x0 /tmp/ccMs4IHL.o
  .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .bss           0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .data          0x00000000        0x0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
@@ -89,10 +89,10 @@ Linker script and memory map
 
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crtbegin.o
-LOAD /tmp/ccPawOCb.o
-LOAD /tmp/ccfiFOCm.o
-LOAD /tmp/ccVfhILE.o
-LOAD /tmp/ccvQec1W.o
+LOAD /tmp/cchQxkea.o
+LOAD /tmp/ccCuRaki.o
+LOAD /tmp/ccdtNpWw.o
+LOAD /tmp/ccMs4IHL.o
 LOAD Libraries/libstm32f0.a
 START GROUP
 LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a
@@ -107,7 +107,7 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 .isr_vector     0x08000000       0xc4
                 0x08000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x08000000       0xc4 /tmp/ccvQec1W.o
+ .isr_vector    0x08000000       0xc4 /tmp/ccMs4IHL.o
                 0x08000000                g_pfnVectors
                 0x080000c4                . = ALIGN (0x4)
 
@@ -233,67 +233,67 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
                 0x08000e9c                __libc_init_array
  *(.text.*)
  .text.USART1_Config
-                0x08000ee0       0x98 /tmp/ccPawOCb.o
+                0x08000ee0       0x98 /tmp/cchQxkea.o
                 0x08000ee0                USART1_Config
  .text.USART2_Config
-                0x08000f78       0x94 /tmp/ccPawOCb.o
+                0x08000f78       0x94 /tmp/cchQxkea.o
                 0x08000f78                USART2_Config
  .text.LED_Config
-                0x0800100c       0x30 /tmp/ccPawOCb.o
+                0x0800100c       0x30 /tmp/cchQxkea.o
                 0x0800100c                LED_Config
  .text.USART2_SetSpeed
-                0x0800103c       0x38 /tmp/ccPawOCb.o
+                0x0800103c       0x38 /tmp/cchQxkea.o
                 0x0800103c                USART2_SetSpeed
- .text.TReset   0x08001074       0x30 /tmp/ccPawOCb.o
+ .text.TReset   0x08001074       0x30 /tmp/cchQxkea.o
                 0x08001074                TReset
  .text.TWriteByte
-                0x080010a4       0x34 /tmp/ccPawOCb.o
+                0x080010a4       0x34 /tmp/cchQxkea.o
                 0x080010a4                TWriteByte
  .text.TReadByte
-                0x080010d8       0x40 /tmp/ccPawOCb.o
+                0x080010d8       0x40 /tmp/cchQxkea.o
                 0x080010d8                TReadByte
  .text.TReadBit
-                0x08001118       0x30 /tmp/ccPawOCb.o
+                0x08001118       0x30 /tmp/cchQxkea.o
                 0x08001118                TReadBit
  .text.ConvertTemp
-                0x08001148       0x24 /tmp/ccPawOCb.o
+                0x08001148       0x24 /tmp/cchQxkea.o
                 0x08001148                ConvertTemp
  .text.ReadTemp
-                0x0800116c       0x54 /tmp/ccPawOCb.o
+                0x0800116c       0x54 /tmp/cchQxkea.o
                 0x0800116c                ReadTemp
  .text.startup.main
-                0x080011c0       0xa0 /tmp/ccPawOCb.o
+                0x080011c0       0xa0 /tmp/cchQxkea.o
                 0x080011c0                main
  .text.SystemInit
-                0x08001260       0xf4 /tmp/ccfiFOCm.o
+                0x08001260       0xf4 /tmp/ccCuRaki.o
                 0x08001260                SystemInit
  .text.NMI_Handler
-                0x08001354        0x2 /tmp/ccVfhILE.o
+                0x08001354        0x2 /tmp/ccdtNpWw.o
                 0x08001354                NMI_Handler
  .text.HardFault_Handler
-                0x08001356        0x4 /tmp/ccVfhILE.o
+                0x08001356        0x4 /tmp/ccdtNpWw.o
                 0x08001356                HardFault_Handler
  .text.SVC_Handler
-                0x0800135a        0x2 /tmp/ccVfhILE.o
+                0x0800135a        0x2 /tmp/ccdtNpWw.o
                 0x0800135a                SVC_Handler
  .text.PendSV_Handler
-                0x0800135c        0x2 /tmp/ccVfhILE.o
+                0x0800135c        0x2 /tmp/ccdtNpWw.o
                 0x0800135c                PendSV_Handler
  *fill*         0x0800135e        0x2 
  .text.USART1_IRQHandler
-                0x08001360       0x74 /tmp/ccVfhILE.o
+                0x08001360       0x74 /tmp/ccdtNpWw.o
                 0x08001360                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x080013d4       0x68 /tmp/ccVfhILE.o
+                0x080013d4       0x68 /tmp/ccdtNpWw.o
                 0x080013d4                USART2_IRQHandler
  .text.SysTick_Handler
-                0x0800143c       0x48 /tmp/ccVfhILE.o
+                0x0800143c       0x48 /tmp/ccdtNpWw.o
                 0x0800143c                SysTick_Handler
  .text.Reset_Handler
-                0x08001484       0x50 /tmp/ccvQec1W.o
+                0x08001484       0x50 /tmp/ccMs4IHL.o
                 0x08001484                Reset_Handler
  .text.Default_Handler
-                0x080014d4        0x2 /tmp/ccvQec1W.o
+                0x080014d4        0x2 /tmp/ccMs4IHL.o
                 0x080014d4                TIM1_CC_IRQHandler
                 0x080014d4                ADC1_COMP_IRQHandler
                 0x080014d4                PVD_IRQHandler
@@ -361,7 +361,7 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .data          0x20000000       0x10 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
  *(.data.*)
  .data.SystemCoreClock
-                0x20000010        0x4 /tmp/ccfiFOCm.o
+                0x20000010        0x4 /tmp/ccCuRaki.o
                 0x20000010                SystemCoreClock
  *(.RAMtext)
                 0x20000014                . = ALIGN (0x4)
@@ -376,23 +376,23 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
                 0x20000014                _bss = .
  *(.bss)
  *(.bss.*)
- .bss.done      0x20000014        0x4 /tmp/ccVfhILE.o
+ .bss.done      0x20000014        0x4 /tmp/ccdtNpWw.o
                 0x20000014                done
- .bss.convert   0x20000018        0x4 /tmp/ccVfhILE.o
+ .bss.convert   0x20000018        0x4 /tmp/ccdtNpWw.o
                 0x20000018                convert
  .bss.temperature
-                0x2000001c        0x1 /tmp/ccVfhILE.o
+                0x2000001c        0x1 /tmp/ccdtNpWw.o
                 0x2000001c                temperature
  *fill*         0x2000001d        0x3 
- .bss.count     0x20000020        0x4 /tmp/ccVfhILE.o
+ .bss.count     0x20000020        0x4 /tmp/ccdtNpWw.o
                 0x20000020                count
- .bss.input     0x20000024        0x1 /tmp/ccVfhILE.o
+ .bss.input     0x20000024        0x1 /tmp/ccdtNpWw.o
                 0x20000024                input
  *fill*         0x20000025        0x3 
- .bss.c         0x20000028        0x4 /tmp/ccVfhILE.o
+ .bss.c         0x20000028        0x4 /tmp/ccdtNpWw.o
                 0x20000028                c
  *(COMMON)
- COMMON         0x2000002c        0x9 /tmp/ccPawOCb.o
+ COMMON         0x2000002c        0x9 /tmp/cchQxkea.o
                 0x2000002c                scratchpad
                 0x20000038                . = ALIGN (0x4)
  *fill*         0x20000035        0x3 
@@ -438,10 +438,10 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 /tmp/ccPawOCb.o
+ .comment       0x00000000       0x30 /tmp/cchQxkea.o
                                  0x31 (size before relaxing)
- .comment       0x00000000       0x31 /tmp/ccfiFOCm.o
- .comment       0x00000000       0x31 /tmp/ccVfhILE.o
+ .comment       0x00000000       0x31 /tmp/ccCuRaki.o
+ .comment       0x00000000       0x31 /tmp/ccdtNpWw.o
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .comment       0x00000000       0x31 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
@@ -452,13 +452,13 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .ARM.attributes
                 0x00000000       0x1d /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/crti.o
  .ARM.attributes
-                0x0000001d       0x31 /tmp/ccPawOCb.o
+                0x0000001d       0x31 /tmp/cchQxkea.o
  .ARM.attributes
-                0x0000004e       0x31 /tmp/ccfiFOCm.o
+                0x0000004e       0x31 /tmp/ccCuRaki.o
  .ARM.attributes
-                0x0000007f       0x31 /tmp/ccVfhILE.o
+                0x0000007f       0x31 /tmp/ccdtNpWw.o
  .ARM.attributes
-                0x000000b0       0x21 /tmp/ccvQec1W.o
+                0x000000b0       0x21 /tmp/ccMs4IHL.o
  .ARM.attributes
                 0x000000d1       0x31 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .ARM.attributes
@@ -491,13 +491,13 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 .debug_aranges  0x00000000      0x190
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x70 /tmp/ccPawOCb.o
+                0x00000000       0x70 /tmp/cchQxkea.o
  .debug_aranges
-                0x00000070       0x28 /tmp/ccfiFOCm.o
+                0x00000070       0x28 /tmp/ccCuRaki.o
  .debug_aranges
-                0x00000098       0x50 /tmp/ccVfhILE.o
+                0x00000098       0x50 /tmp/ccdtNpWw.o
  .debug_aranges
-                0x000000e8       0x28 /tmp/ccvQec1W.o
+                0x000000e8       0x28 /tmp/ccMs4IHL.o
  .debug_aranges
                 0x00000110       0x20 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .debug_aranges
@@ -510,44 +510,44 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3e9b
+.debug_info     0x00000000     0x3e9a
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xf72 /tmp/ccPawOCb.o
- .debug_info    0x00000f72      0x332 /tmp/ccfiFOCm.o
- .debug_info    0x000012a4      0x666 /tmp/ccVfhILE.o
- .debug_info    0x0000190a       0x5a /tmp/ccvQec1W.o
- .debug_info    0x00001964      0x735 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_info    0x00002099      0x39c Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_info    0x00002435      0xa88 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_info    0x00002ebd      0xfde Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_info    0x00000000      0xf72 /tmp/cchQxkea.o
+ .debug_info    0x00000f72      0x332 /tmp/ccCuRaki.o
+ .debug_info    0x000012a4      0x666 /tmp/ccdtNpWw.o
+ .debug_info    0x0000190a       0x59 /tmp/ccMs4IHL.o
+ .debug_info    0x00001963      0x735 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_info    0x00002098      0x39c Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_info    0x00002434      0xa88 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_info    0x00002ebc      0xfde Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
 .debug_abbrev   0x00000000      0xd10
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x287 /tmp/ccPawOCb.o
- .debug_abbrev  0x00000287      0x150 /tmp/ccfiFOCm.o
- .debug_abbrev  0x000003d7      0x19e /tmp/ccVfhILE.o
- .debug_abbrev  0x00000575       0x12 /tmp/ccvQec1W.o
+ .debug_abbrev  0x00000000      0x287 /tmp/cchQxkea.o
+ .debug_abbrev  0x00000287      0x150 /tmp/ccCuRaki.o
+ .debug_abbrev  0x000003d7      0x19e /tmp/ccdtNpWw.o
+ .debug_abbrev  0x00000575       0x12 /tmp/ccMs4IHL.o
  .debug_abbrev  0x00000587      0x1ec Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .debug_abbrev  0x00000773      0x136 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .debug_abbrev  0x000008a9      0x266 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
  .debug_abbrev  0x00000b0f      0x201 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
-.debug_line     0x00000000     0x10b7
+.debug_line     0x00000000     0x10c2
  *(.debug_line)
- .debug_line    0x00000000      0x34b /tmp/ccPawOCb.o
- .debug_line    0x0000034b      0x14e /tmp/ccfiFOCm.o
- .debug_line    0x00000499      0x1a6 /tmp/ccVfhILE.o
- .debug_line    0x0000063f       0x7d /tmp/ccvQec1W.o
- .debug_line    0x000006bc      0x1d7 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
- .debug_line    0x00000893      0x169 Libraries/libstm32f0.a(stm32f0xx_misc.o)
- .debug_line    0x000009fc      0x347 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
- .debug_line    0x00000d43      0x374 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_line    0x00000000      0x34f /tmp/cchQxkea.o
+ .debug_line    0x0000034f      0x152 /tmp/ccCuRaki.o
+ .debug_line    0x000004a1      0x1aa /tmp/ccdtNpWw.o
+ .debug_line    0x0000064b       0x7c /tmp/ccMs4IHL.o
+ .debug_line    0x000006c7      0x1d7 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_line    0x0000089e      0x169 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_line    0x00000a07      0x347 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_line    0x00000d4e      0x374 Libraries/libstm32f0.a(stm32f0xx_usart.o)
 
 .debug_frame    0x00000000      0xaf4
  *(.debug_frame)
- .debug_frame   0x00000000      0x138 /tmp/ccPawOCb.o
- .debug_frame   0x00000138       0x48 /tmp/ccfiFOCm.o
- .debug_frame   0x00000180       0xa0 /tmp/ccVfhILE.o
+ .debug_frame   0x00000000      0x138 /tmp/cchQxkea.o
+ .debug_frame   0x00000138       0x48 /tmp/ccCuRaki.o
+ .debug_frame   0x00000180       0xa0 /tmp/ccdtNpWw.o
  .debug_frame   0x00000220      0x11c Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .debug_frame   0x0000033c       0x5c Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .debug_frame   0x00000398      0x320 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
@@ -555,28 +555,28 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
  .debug_frame   0x00000aa8       0x20 /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/libgcc.a(_udivsi3.o)
  .debug_frame   0x00000ac8       0x2c /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/armv6-m/libc.a(lib_a-init.o)
 
-.debug_str      0x00000000     0x155b
+.debug_str      0x00000000     0x1567
  *(.debug_str)
- .debug_str     0x00000000      0x721 /tmp/ccPawOCb.o
-                                0x768 (size before relaxing)
- .debug_str     0x00000721       0xf4 /tmp/ccfiFOCm.o
-                                0x1ea (size before relaxing)
- .debug_str     0x00000815       0xad /tmp/ccVfhILE.o
-                                0x268 (size before relaxing)
- .debug_str     0x000008c2      0x19d Libraries/libstm32f0.a(stm32f0xx_gpio.o)
+ .debug_str     0x00000000      0x725 /tmp/cchQxkea.o
+                                0x76c (size before relaxing)
+ .debug_str     0x00000725       0xf8 /tmp/ccCuRaki.o
+                                0x1ee (size before relaxing)
+ .debug_str     0x0000081d       0xb1 /tmp/ccdtNpWw.o
+                                0x26c (size before relaxing)
+ .debug_str     0x000008ce      0x19d Libraries/libstm32f0.a(stm32f0xx_gpio.o)
                                 0x42a (size before relaxing)
- .debug_str     0x00000a5f       0xa0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
+ .debug_str     0x00000a6b       0xa0 Libraries/libstm32f0.a(stm32f0xx_misc.o)
                                 0x279 (size before relaxing)
- .debug_str     0x00000aff      0x463 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
+ .debug_str     0x00000b0b      0x463 Libraries/libstm32f0.a(stm32f0xx_rcc.o)
                                 0x69d (size before relaxing)
- .debug_str     0x00000f62      0x5f9 Libraries/libstm32f0.a(stm32f0xx_usart.o)
+ .debug_str     0x00000f6e      0x5f9 Libraries/libstm32f0.a(stm32f0xx_usart.o)
                                 0x90b (size before relaxing)
 
 .debug_loc      0x00000000     0x20aa
  *(.debug_loc)
- .debug_loc     0x00000000      0x2bd /tmp/ccPawOCb.o
- .debug_loc     0x000002bd      0x19e /tmp/ccfiFOCm.o
- .debug_loc     0x0000045b       0x93 /tmp/ccVfhILE.o
+ .debug_loc     0x00000000      0x2bd /tmp/cchQxkea.o
+ .debug_loc     0x000002bd      0x19e /tmp/ccCuRaki.o
+ .debug_loc     0x0000045b       0x93 /tmp/ccdtNpWw.o
  .debug_loc     0x000004ee      0x3f9 Libraries/libstm32f0.a(stm32f0xx_gpio.o)
  .debug_loc     0x000008e7      0x130 Libraries/libstm32f0.a(stm32f0xx_misc.o)
  .debug_loc     0x00000a17      0xa8b Libraries/libstm32f0.a(stm32f0xx_rcc.o)
@@ -596,10 +596,10 @@ LOAD /home/mas/Projekt/arm-2012.09/bin/../lib/gcc/arm-none-eabi/4.7.2/armv6-m/cr
 
 .debug_varnames
  *(.debug_varnames)
-OUTPUT(main.elf elf32-littlearm)
+OUTPUT(kit/main.elf elf32-littlearm)
 
 .debug_ranges   0x00000000      0x150
- .debug_ranges  0x00000000       0xa8 /tmp/ccPawOCb.o
- .debug_ranges  0x000000a8       0x48 /tmp/ccfiFOCm.o
- .debug_ranges  0x000000f0       0x40 /tmp/ccVfhILE.o
- .debug_ranges  0x00000130       0x20 /tmp/ccvQec1W.o
+ .debug_ranges  0x00000000       0xa8 /tmp/cchQxkea.o
+ .debug_ranges  0x000000a8       0x48 /tmp/ccCuRaki.o
+ .debug_ranges  0x000000f0       0x40 /tmp/ccdtNpWw.o
+ .debug_ranges  0x00000130       0x20 /tmp/ccMs4IHL.o

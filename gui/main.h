@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include <fcntl.h>
-#include "../projekt/inc/commands.h"
+#include "commands.h"
 
 #include <gtkmm/main.h>
 #include <gtkmm/builder.h>
