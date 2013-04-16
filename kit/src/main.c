@@ -7,24 +7,26 @@ extern volatile char temperature;
 extern volatile int done;
 extern volatile int convert;
 
+extern char values[3];
+
 char scratchpad[9];
 
 int main(void)
 {
   LED_Config();
-  
+
   USART1_Config();
   USART2_Config();
-  
+
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
-  
+
   ConvertTemp();
   ReadTemp();
-  
+
   if (SysTick_Config(SystemCoreClock / 4))  //4/s
-  { 
-    /* Capture error */ 
+  {
+    /* Capture error */
     while (1);
   }
 
@@ -35,10 +37,38 @@ int main(void)
         {
           ConvertTemp();
           ReadTemp();
-          GPIOC->ODR ^= GPIO_Pin_9;
+          //GPIOC->ODR ^= GPIO_Pin_9;
           convert = 0;
         }
-          
+      //Red LED
+      if(temperature>values[2])
+        {
+          GPIOC->ODR |= GPIO_Pin_9;
+          GPIOB->ODR |= GPIO_Pin_2;
+        }
+      else
+        {
+          GPIOC->ODR &= ~GPIO_Pin_9;
+          GPIOB->ODR &= ~GPIO_Pin_2;
+        }
+      //Yellow LED
+      if(temperature>values[1])
+        {
+          GPIOB->ODR |= GPIO_Pin_1;
+        }
+      else
+        {
+          GPIOB->ODR &= ~GPIO_Pin_1;
+        }
+      //Green LED
+      if(temperature>values[0])
+        {
+          GPIOB->ODR |= GPIO_Pin_0;
+        }
+      else
+        {
+          GPIOB->ODR &= ~GPIO_Pin_0;
+        }
     }
 }
 
@@ -96,7 +126,7 @@ void USART1_Config(void)
     // Enable USART
     USART_Cmd(USART1, ENABLE);
   }
-  
+
 void USART2_Config(void)
   {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -164,21 +194,29 @@ void LED_Config(void)
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
+    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_10 | GPIO_Pin_11;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
   }
 
 void USART2_SetSpeed(int speed)
   {
     USART_Cmd(USART2, DISABLE);
-    
+
     USART_InitTypeDef USART_InitStructure;
-  
+
     USART_InitStructure.USART_BaudRate = speed;
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;
     USART_InitStructure.USART_StopBits = USART_StopBits_1;
     USART_InitStructure.USART_Parity = USART_Parity_No;
     USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
     USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-    
+
     USART_Init(USART2, &USART_InitStructure);
 
     // Enable USART
@@ -193,11 +231,11 @@ void TReset(void)
     while(done);
     if(input == 0xE0);
       //GPIOC->ODR ^= GPIO_Pin_8;
-    
+
   }
 
 void TWriteByte(char data)
-  {    
+  {
     for(int i = 0; i < 8; i++)
       {
         done = 1;
@@ -205,7 +243,7 @@ void TWriteByte(char data)
           USART_SendData(USART2, 0xFF);
         else
           USART_SendData(USART2, 0x00);
-        
+
         while(done);
         data >>= 1;
       }
@@ -214,7 +252,7 @@ void TWriteByte(char data)
 char TReadByte(void)
   {
     char data = 0;
-    
+
     for(int i = 0; i < 8; i++)
       {
         data >>= 1;
@@ -227,7 +265,7 @@ char TReadByte(void)
             data |= 0x80;
           }
       }
-      
+
     return data;
   }
 
@@ -243,11 +281,11 @@ char TReadBit(void)
       }
     return 0;
   }
-  
+
 void ConvertTemp(void)
   {
     char temp;
-    
+
     TReset();
     USART2_SetSpeed(115200);
     TWriteByte(0xCC);
@@ -259,7 +297,7 @@ void ConvertTemp(void)
       temp = TReadBit();
     }
   }
-  
+
 void ReadTemp(void)
   {
     TReset();
@@ -274,5 +312,5 @@ void ReadTemp(void)
     temperature = 0;
     temperature |= ((scratchpad[0] >> 4) & 0x0f);
     temperature |= ((scratchpad[1] & 0x07) << 4);
-    
+
   }

@@ -7,6 +7,8 @@ volatile char input = 0;   //input in binary mode
 volatile char temperature = 0;
 
 int convert = 0;
+int setvalues = 0;
+char values[3] = {0,0,0};
 volatile int done = 0;
 
 void NMI_Handler(void)
@@ -38,16 +40,23 @@ void USART1_IRQHandler(void)
 
     if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
       {
-        //char in = (USART_ReceiveData(USART1));
         char command = USART_ReceiveData(USART1);
-
-        if(command == GETTEMP)
+        if(setvalues > 0)
+          {
+            values[3-setvalues] = command;
+            setvalues--;
+          }
+        else if(command == GETTEMP)
           {
             USART_SendData(USART1, temperature);
           }
+        else if(command == SETVALUES)
+          {
+            setvalues = 3;
+          }
         else
           {
-            USART_SendData(USART1, convert);
+            //USART_SendData(USART1, convert);
           }
         //  GPIOC->ODR ^= GPIO_Pin_9;
 
@@ -61,7 +70,7 @@ void USART1_IRQHandler(void)
         USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
       }
   }
-  
+
 void USART2_IRQHandler(void)
   {
   /*
@@ -72,7 +81,7 @@ void USART2_IRQHandler(void)
     if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
       {
         input = USART_ReceiveData(USART2);
-        
+
         done = 0;
         //GPIOC->ODR ^= GPIO_Pin_8;
 
@@ -90,7 +99,7 @@ void USART2_IRQHandler(void)
 void SysTick_Handler(void)
   {
     c++;
-    if(c == 4)
+    if(c == 2)
       {
         GPIOC->ODR ^= GPIO_Pin_8;
         if(!convert)

@@ -19,6 +19,7 @@
             <property name="events">GDK_EXPOSURE_MASK | GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_MOTION_MASK | GDK_BUTTON1_MOTION_MASK | GDK_BUTTON2_MOTION_MASK | GDK_BUTTON3_MOTION_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK | GDK_LEAVE_NOTIFY_MASK | GDK_FOCUS_CHANGE_MASK | GDK_STRUCTURE_MASK | GDK_PROPERTY_CHANGE_MASK | GDK_VISIBILITY_NOTIFY_MASK | GDK_PROXIMITY_IN_MASK | GDK_PROXIMITY_OUT_MASK | GDK_SUBSTRUCTURE_MASK | GDK_SCROLL_MASK | GDK_TOUCH_MASK | GDK_SMOOTH_SCROLL_MASK</property>
             <property name="margin_left">6</property>
             <property name="max_length">3</property>
+            <property name="activates_default">True</property>
             <property name="width_chars">8</property>
             <property name="numeric">True</property>
             <property name="update_policy">if-valid</property>
@@ -34,7 +35,6 @@
           <object class="GtkLabel" id="label1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_right">17</property>
             <property name="label" translatable="yes">Teplota 1</property>
           </object>
           <packing>
@@ -97,7 +97,9 @@
             <property name="label" translatable="yes">Nastavit mezní teploty</property>
             <property name="width_request">200</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
+            <property name="can_default">True</property>
+            <property name="has_default">True</property>
             <property name="receives_default">False</property>
             <property name="margin_left">4</property>
             <property name="margin_right">6</property>
