@@ -8,7 +8,7 @@ volatile char temperature = 0;
 
 int convert = 0;
 int setvalues = 0;
-char values[3] = {0,0,0};
+char values[2] = {0,0};
 volatile int done = 0;
 
 void NMI_Handler(void)
@@ -43,7 +43,7 @@ void USART1_IRQHandler(void)
         char command = USART_ReceiveData(USART1);
         if(setvalues > 0)
           {
-            values[3-setvalues] = command;
+            values[2-setvalues] = command;
             setvalues--;
           }
         else if(command == GETTEMP)
@@ -52,7 +52,7 @@ void USART1_IRQHandler(void)
           }
         else if(command == SETVALUES)
           {
-            setvalues = 3;
+            setvalues = 2;
           }
         else
           {

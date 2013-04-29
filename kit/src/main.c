@@ -41,33 +41,34 @@ int main(void)
           convert = 0;
         }
       //Red LED
-      if(temperature>values[2])
-        {
-          GPIOC->ODR |= GPIO_Pin_9;
-          GPIOB->ODR |= GPIO_Pin_2;
-        }
-      else
-        {
-          GPIOC->ODR &= ~GPIO_Pin_9;
-          GPIOB->ODR &= ~GPIO_Pin_2;
-        }
-      //Yellow LED
-      if(temperature>values[1])
-        {
-          GPIOB->ODR |= GPIO_Pin_1;
-        }
-      else
-        {
-          GPIOB->ODR &= ~GPIO_Pin_1;
-        }
-      //Green LED
       if(temperature>values[0])
         {
-          GPIOB->ODR |= GPIO_Pin_0;
+          GPIOB->ODR |= GPIO_Pin_2;
+          GPIOB->ODR |= GPIO_Pin_10;
+
+          GPIOB->ODR &= ~GPIO_Pin_0;
+          GPIOB->ODR &= ~GPIO_Pin_1;
+          GPIOB->ODR &= ~GPIO_Pin_11;
         }
+      //Green LED
+      else if(temperature<values[1])
+        {
+          GPIOB->ODR |= GPIO_Pin_0;
+          GPIOB->ODR |= GPIO_Pin_11;
+
+          GPIOB->ODR &= ~GPIO_Pin_2;
+          GPIOB->ODR &= ~GPIO_Pin_1;
+          GPIOB->ODR &= ~GPIO_Pin_10;
+        }
+      //Yellow LED
       else
         {
+          GPIOB->ODR |= GPIO_Pin_1;
+
+          GPIOB->ODR &= ~GPIO_Pin_2;
           GPIOB->ODR &= ~GPIO_Pin_0;
+          GPIOB->ODR &= ~GPIO_Pin_10;
+          GPIOB->ODR &= ~GPIO_Pin_11;
         }
     }
 }
